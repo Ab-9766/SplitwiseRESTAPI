@@ -4,8 +4,9 @@ import org.example.splitwise_application_spring.DTOs.ResponseStatus;
 import org.example.splitwise_application_spring.DTOs.SettleGroupRequestDTO;
 import org.example.splitwise_application_spring.DTOs.SettleGroupResponseDTO;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class GroupController {
     public SettleGroupResponseDTO settleGroup(SettleGroupRequestDTO settleGroupRequestDTO){
         SettleGroupResponseDTO responseDTO= new SettleGroupResponseDTO();

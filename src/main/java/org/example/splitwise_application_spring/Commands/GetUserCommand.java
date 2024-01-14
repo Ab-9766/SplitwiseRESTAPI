@@ -34,9 +34,7 @@ public class GetUserCommand implements Command{
         GetUserRequestDTO requestDTO = new GetUserRequestDTO();
         requestDTO.setUserId(Long.parseLong(parts[1]));
 
-
-
-        GetUserResponseDTO responseDTO= userController.getUser(requestDTO);
+        GetUserResponseDTO responseDTO= userController.getUser(Long.parseLong(parts[1]));
 
         if(responseDTO.getResponseStatus().equals(ResponseStatus.SUCCESS)){
             System.out.println("User = "+ responseDTO.getName());

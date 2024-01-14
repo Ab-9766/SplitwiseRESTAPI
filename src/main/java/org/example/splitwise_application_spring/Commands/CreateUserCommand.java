@@ -34,7 +34,7 @@ public class CreateUserCommand implements Command{
         CreateUserRequestDTO requestDTO = new CreateUserRequestDTO();
         requestDTO.setName(parts[1]);
         requestDTO.setUsername(parts[2]);
-        requestDTO.setPassword(parts[3]);
+        requestDTO.setPwd(parts[3]);
 
         CreateUserResponseDTO responseDTO= userController.createUser(requestDTO);
 
