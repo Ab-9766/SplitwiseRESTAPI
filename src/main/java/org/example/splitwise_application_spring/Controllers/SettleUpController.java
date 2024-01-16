@@ -11,7 +11,7 @@ import org.springframework.stereotype.Controller;
 import java.util.List;
 
 @Controller
-public class SettleUpController implements IUserSettleUpService {
+public class SettleUpController {
 
     private IUserSettleUpService service;
 
@@ -20,7 +20,7 @@ public class SettleUpController implements IUserSettleUpService {
         this.service = service;
     }
 
-    public SettleUserResponseDTO settleUpUser(SettleUserRequestDTO settleUserRequestDTO){
+    public SettleUserResponseDTO settleUpUser(SettleUserRequestDTO settleUserRequestDTO) throws Exception {
 
     List<Transaction> transaction=service.settleUpUser(settleUserRequestDTO.getUserId());
     SettleUserResponseDTO responseDTO= mapExpenseToDTO(transaction);
